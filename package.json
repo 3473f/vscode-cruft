@@ -1,0 +1,62 @@
+{
+  "name": "cruft",
+  "displayName": "Cruft",
+  "description": "Create new projects from cookiecutter templates using cruft.",
+  "version": "0.0.1",
+  "publisher": "Mohamed Abdelaziz",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.7.0"
+  },
+  "activationEvents": [
+    "onCommand:cruft.createProject"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cruft.createProject",
+        "title": "Cruft: create Project from Cookiecutter Template"
+      }
+    ],
+    "configuration": {
+      "title": "Cruft",
+      "properties": {
+        "cruft.templates": {
+          "type": "array",
+          "description": "List of cookiecutter template configurations.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Display name for the template"
+              },
+              "url": {
+                "type": "string",
+                "description": "SSH URL of the cookiecutter template repository"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.70.0",
+    "typescript": "^5.8.3",
+    "vscode-test": "^1.6.0"
+  }
+}
