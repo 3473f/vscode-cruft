@@ -5,11 +5,8 @@
   "version": "0.1.0",
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.7.0"
+    "vscode": "^1.101.0"
   },
-  "activationEvents": [
-    "onCommand:cruft.createProject"
-  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -52,9 +49,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@types/vscode": "^1.101.0",
     "typescript": "^5.8.3",
-    "vscode": "^1.1.37",
+    "vscode": "^1.1.34",
     "vscode-test": "^1.6.0"
   }
 }
