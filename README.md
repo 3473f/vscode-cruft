@@ -12,10 +12,6 @@ Creates projects from Cookiecutter templates using cruft.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
 * `cruft.templates`: Array of template name and the corresponding URL.
@@ -28,10 +24,6 @@ This extension contributes the following settings:
     }
 ]
 ```
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 
